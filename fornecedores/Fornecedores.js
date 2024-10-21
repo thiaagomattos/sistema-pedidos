@@ -8,7 +8,7 @@ const Fornecedor = connection.define('fornecedores',{
     },
     contato:{
         type: Sequelize.INTEGER,
-        allowNull: true
+        allowNull: false
     }
 });
 

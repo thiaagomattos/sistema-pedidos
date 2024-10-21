@@ -1,0 +1,20 @@
+<%- include('../partials/header.ejs')  %>
+<%- include('../partials/navbar.ejs')  %>
+
+<div class="container">
+    <hr>
+    <div class="card">
+        <div class="card-header">
+            <h2>Registro de Fornecedor</h2>
+        </div>
+        <div class="card-body">
+            <form method="POST" action="/fornecedores/salvar">
+                <input class="form-control" type="text" name="nome" placeholder="Digite o nome do fornecedor"><br>
+                <input class="form-control" type="number" name="contato" placeholder="Digite o número de telefone do fornecedor"><br>
+                <button class="btn btn-success">Registrar</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<%- include('../partials/footer.ejs')  %>

@@ -1,0 +1,37 @@
+<%- include('../partials/header.ejs')  %>
+<%- include('../partials/navbar.ejs')  %>
+
+<div class="container">
+    <hr>
+    <h2>Fornecedores</h2>
+    <a class="btn btn-success" href="/fornecedores/novo">Registrar novo Fornecedor</a>
+    <hr>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Contato</th>
+                <th>Produtos</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <% fornecedores.forEach(fornecedor => { %>
+                <tr>
+                    <td><%=fornecedor.id%></td>
+                    <td><%=fornecedor.nome%></td>
+                    <td><%=fornecedor.contato%></td>
+                    <td>
+                        <a href="/produtos">Produtos</a>
+                    </td>
+                </tr>
+
+            <% }) %>
+        </tbody>
+
+    </table>
+
+
+<%- include('../partials/footer.ejs')  %>
+

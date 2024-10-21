@@ -1,1 +1,18 @@
-<h1>teste</h1>
+<%- include('partials/header.ejs')  %>
+<%- include('partials/navbar.ejs')  %>
+<body>
+    <div class="container">
+        <hr>
+        <div class="jumbotron">
+            <h1 class="display-4">Olá!</h1>
+            <p class="lead">Esse é o sistema de estoque do Mercado e Panificadora Correa</p>
+            <hr class="my-4">
+            <p>Abaixo você encontra os últimos pedidos feitos!</p>
+            <p class="lead">
+            <a class="btn btn-primary btn-lg" href="/pedidos" role="button">Clique aqui</a>
+            </p>
+        </div>
+    </div>
+</body>
+
+<%- include('partials/footer.ejs')  %>
