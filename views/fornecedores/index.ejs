@@ -13,6 +13,7 @@
                 <th>Nome</th>
                 <th>Contato</th>
                 <th>Produtos</th>
+                <th>Ações</th>
             </tr>
         </thead>
         <tbody>
@@ -25,6 +26,13 @@
                     <td>
                         <a href="/produtos">Produtos</a>
                     </td>
+                    <td>
+                        <a href="/fornecedores/edit/<%= fornecedor.id %>" class="btn btn-warning">Editar</a>
+                        <form method="POST" action="/fornecedores/deletar" style="display: inline", onsubmit="confirmarExclusao(event, this)">
+                            <input type="hidden" name="id" value="<%= fornecedor.id %>">
+                            <button class="btn btn-danger">Excluir</button>
+                        </form>
+                    </td>
                 </tr>
 
             <% }) %>
@@ -35,3 +43,12 @@
 
 <%- include('../partials/footer.ejs')  %>
 
+<script>
+    function confirmarExclusao(event, form){
+        event.preventDefault();
+        var decision = confirm("Deseja excluir esse fornecedor?");
+        if(decision){
+            form.submit();
+        }
+    }
+</script>
